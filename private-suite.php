@@ -66,14 +66,14 @@ add_filter('private_title_format', 'private_suite_custom_private_title');
 
 function private_suite_custom_private_title() {
 	$options = private_suite_get_options();
-	return $options['private_title_prefix'];
+	return $options['private_title_prefix'] . '%s';
 }
 
 add_filter('protected_title_format', 'private_suite_custom_protected_title');
 
 function private_suite_custom_protected_title() {
 	$options = private_suite_get_options();
-	return $options['protected_title_prefix'];
+	return $options['protected_title_prefix'] . '%s';
 }
 
 /*---------------------- Private Categories -----------------------*/
